@@ -1,59 +1,71 @@
-# 🚀 Ronin Development Official
+# 🎮 Ronin Development
 
-[![GitHub Org followers](https://img.shields.io/github/followers/Ronin-Development-Official?label=Follow&style=social)](https://github.com/Ronin-Development-Official)
-[![LinkedIn](https://img.shields.io/badge/-LinkedIn-blue?style=flat&logo=Linkedin&logoColor=white)](https://linkedin.com/company/ronin-development)
-[![Website](https://img.shields.io/badge/-Website-gray?style=flat&logo=google-chrome&logoColor=white)](https://ronin-development.com)
+[![Discord](https://img.shields.io/badge/Discord-Join%20Us-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/ronin-development)
+[![FiveM](https://img.shields.io/badge/FiveM-Featured%20Resources-F24E1E?style=for-the-badge&logo=fivem&logoColor=white)](https://forum.cfx.re)
+[![GitHub Followers](https://img.shields.io/github/followers/Ronin-Development?style=for-the-badge&logo=github&logoColor=white&label=FOLLOWERS)](https://github.com/Ronin-Development)
 
-## 🎯 Our Mission
-We are dedicated to pushing the boundaries of software development through innovative solutions and cutting-edge technologies. Our team of skilled developers focuses on creating robust, scalable applications that drive digital transformation and deliver exceptional value to our clients.
+## 🚀 About Us
+Ronin Development specializes in creating high-quality, performance-optimized resources for the FiveM QBCore framework. Our team is dedicated to enhancing roleplay experiences through innovative scripts and solutions.
 
-## 💻 What We Do
-- **Open Source**: Contributing to and maintaining impactful open-source projects
-- **Enterprise Solutions**: Developing scalable, enterprise-grade applications
-- **Developer Tools**: Crafting efficient tools to enhance developer workflows
-- **Community**: Building a strong developer community through collaboration and knowledge sharing
+## 💻 Our Expertise
+- **QBCore Framework Development**
+- **Custom Script Creation**
+- **Resource Optimization**
+- **Server Performance Enhancement**
+- **MLO Integration**
 
-## 🛠️ Our Tech Stack
-![](https://img.shields.io/badge/Backend-Node.js-informational?style=flat&logo=node.js&logoColor=white&color=2bbc8a)
-![](https://img.shields.io/badge/Frontend-React-informational?style=flat&logo=react&logoColor=white&color=2bbc8a)
-![](https://img.shields.io/badge/Cloud-AWS-informational?style=flat&logo=amazon-aws&logoColor=white&color=2bbc8a)
-![](https://img.shields.io/badge/Database-MongoDB-informational?style=flat&logo=mongodb&logoColor=white&color=2bbc8a)
-![](https://img.shields.io/badge/CI/CD-GitHub_Actions-informational?style=flat&logo=github-actions&logoColor=white&color=2bbc8a)
-![](https://img.shields.io/badge/Container-Docker-informational?style=flat&logo=docker&logoColor=white&color=2bbc8a)
+## 🛠️ Tech Stack
+![Lua](https://img.shields.io/badge/Lua-2C2D72?style=for-the-badge&logo=lua&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 
-## 📈 Organization Stats
+## 📈 GitHub Statistics
 
-<a href="https://github.com/Ronin-Development-Official">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Ronin-Development-Official&hide=java,html,tex&title_color=ffffff&text_color=c9cacc&icon_color=2bbc8a&bg_color=1d1f21&langs_count=6" />
-</a>
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Ronin-Development&theme=dark&layout=compact&hide_border=true" />
+</div>
 
-## 🏆 Featured Projects
+## 🔥 Featured Resources
 
-### [Project Name 1](https://github.com/Ronin-Development-Official/project1)
-Our flagship project focused on [brief description of problem solved and impact]. 
-- Stars: ![GitHub stars](https://img.shields.io/github/stars/Ronin-Development-Official/project1?style=social)
-- Tech Stack: `Node.js`, `React`, `MongoDB`
+### 💼 QB Management Suite
+A comprehensive suite of management tools for QBCore servers
+- 📊 Advanced statistics tracking
+- 💰 Enhanced economy management
+- 👥 Improved player administration
+- ⚡ Optimized for high-performance
 
-### [Project Name 2](https://github.com/Ronin-Development-Official/project2)
-Enterprise-grade solution for modern development challenges.
-- Downloads: ![Downloads](https://img.shields.io/github/downloads/Ronin-Development-Official/project2/total)
-- Tech Stack: `AWS`, `Docker`, `TypeScript`
+### 🏢 QB Business Framework
+Complete business management system for QBCore
+- 🏪 Multiple business types
+- 📱 NUI Interface
+- 💳 Advanced payment systems
+- 👥 Employee management
 
-## 🤝 Contributing
-We welcome contributions from the community! Check out our [Contributing Guidelines](https://github.com/Ronin-Development-Official/.github/CONTRIBUTING.md) to get started.
+## 📦 Latest Releases
 
-## 📚 Resources
-- [Documentation](https://docs.ronin-development.com)
-- [Developer Blog](https://blog.ronin-development.com)
-- [Community Forum](https://community.ronin-development.com)
-- [API Reference](https://api.ronin-development.com)
+<!-- This section automatically updates with your latest releases -->
+[![Latest Release](https://img.shields.io/github/v/release/Ronin-Development/latest-resource?style=for-the-badge&logo=github&label=LATEST%20RELEASE)](https://github.com/Ronin-Development/latest-resource/releases/latest)
 
-## 📫 Get in Touch
-- 🌐 Website: [ronin-development.com](https://ronin-development.com)
-- 📧 Email: contact@ronin-development.com
-- 🐦 Twitter: [@RoninDev](https://twitter.com/RoninDev)
-- 💼 LinkedIn: [Ronin Development](https://linkedin.com/company/ronin-development)
+## 🤝 Support & Community
+
+- 💬 Join our [Discord](https://discord.gg/ronin-development) for support
+- 📚 Check our [Documentation](https://docs.ronin-development.com)
+- 🌟 Follow us for updates
+- 🔧 Report issues in our Discord
+
+## 📫 Contact Us
+- Discord: [Ronin Development](https://discord.gg/ronin-development)
+- Email: contact@ronin-development.com
+- FiveM Forums: [Ronin Development](https://forum.cfx.re/u/ronin-development)
 
 ---
 
-<p align="center">© 2025 Ronin Development Official. Forging the future of technology.</p>
+<div align="center">
+
+### Supporting QBCore Communities Since 2023
+
+[![QBCore](https://img.shields.io/badge/QBCore-Partner-brightgreen?style=for-the-badge)](https://github.com/qbcore-framework)
+
+</div>
