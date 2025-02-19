@@ -21,12 +21,6 @@ Ronin Development specializes in creating high-quality, performance-optimized re
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 
-## 📈 GitHub Statistics
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Ronin-Development-Official&theme=dark&layout=compact&hide_border=true" />
-</div>
-
 ## 🔥 Featured Resources
 
 ### 💼 QB Management Suite
