@@ -49,16 +49,8 @@ jobs:
             fi
           done
           
-          echo "Current README content:"
-          cat README.md
-          
-          echo "Updating README with badges:"
-          echo -e "$BADGES"
-          
-          sed -i -e "/<!-- BEGIN_RELEASES -->/,/<!-- END_RELEASES -->/c\<!-- BEGIN_RELEASES -->\n${BADGES}<!-- END_RELEASES -->" README.md
-          
-          echo "Updated README content:"
-          cat README.md
+          # Update using the existing marker
+          sed -i -e "/<!-- Latest Releases -->/,/## 🤝 Support & Community/c\<!-- Latest Releases -->\n${BADGES}\n## 🤝 Support & Community" README.md
 
       - name: Commit and Push Changes
         run: |
