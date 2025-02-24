@@ -49,8 +49,13 @@ jobs:
             fi
           done
           
-          # Update using the existing marker
-          sed -i -e "/<!-- Latest Releases -->/,/## 🤝 Support & Community/c\<!-- Latest Releases -->\n${BADGES}\n## 🤝 Support & Community" README.md
+          # Update both README files if they exist
+          for README_PATH in "README.md" "profile/README.md"; do
+            if [ -f "$README_PATH" ]; then
+              echo "Updating $README_PATH..."
+              sed -i -e "/<!-- Latest Releases -->/,/## 🤝 Support & Community/c\<!-- Latest Releases -->\n${BADGES}\n## 🤝 Support & Community" "$README_PATH"
+            fi
+          done
 
       - name: Commit and Push Changes
         run: |
@@ -58,6 +63,6 @@ jobs:
             echo "No changes to commit"
             exit 0
           fi
-          git add README.md
+          git add README.md profile/README.md || true
           git commit -m "Update release badges"
           git push "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/Ronin-Development-Official/.github.git" HEAD:main
