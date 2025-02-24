@@ -24,27 +24,41 @@ jobs:
           TOKEN="${{ secrets.GITHUB_TOKEN }}"
           ORG="Ronin-Development-Official"
           
-          # Get all repositories
+          echo "Fetching repositories..."
           REPOS=$(curl -s -H "Authorization: token $TOKEN" \
             "https://api.github.com/orgs/$ORG/repos" | \
             jq -r '.[].name')
           
-          # Initialize badges array
+          echo "Found repositories:"
+          echo "$REPOS"
+          
           BADGES=""
           
-          # Loop through repositories and check for releases
+          echo "Checking for releases..."
           for REPO in $REPOS; do
+            echo "Checking $REPO..."
             LATEST=$(curl -s -H "Authorization: token $TOKEN" \
-              "https://api.github.com/repos/$ORG/$REPO/releases/latest" || echo "null")
+              "https://api.github.com/repos/$ORG/$REPO/releases/latest")
             
-            if [ "$LATEST" != "null" ]; then
+            if [ "$(echo $LATEST | jq -r '.message')" != "Not Found" ]; then
+              echo "Found release for $REPO"
               BADGE="[![${REPO^^}](https://img.shields.io/github/v/release/$ORG/$REPO?style=for-the-badge&logo=github&label=${REPO^^})](https://github.com/$ORG/$REPO/releases/latest)"
               BADGES="${BADGES}${BADGE}\n\n"
+            else
+              echo "No releases found for $REPO"
             fi
           done
           
-          # Update README.md
+          echo "Current README content:"
+          cat README.md
+          
+          echo "Updating README with badges:"
+          echo -e "$BADGES"
+          
           sed -i -e "/<!-- BEGIN_RELEASES -->/,/<!-- END_RELEASES -->/c\<!-- BEGIN_RELEASES -->\n${BADGES}<!-- END_RELEASES -->" README.md
+          
+          echo "Updated README content:"
+          cat README.md
 
       - name: Commit and Push Changes
         run: |
