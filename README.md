@@ -23,19 +23,29 @@ Ronin Development specializes in creating high-quality, performance-optimized re
 
 ## 🔥 Featured Resources
 
-### 💼 QB Management Suite
-A comprehensive suite of management tools for QBCore servers
-- 📊 Advanced statistics tracking
-- 💰 Enhanced economy management
-- 👥 Improved player administration
-- ⚡ Optimized for high-performance
+### NPC Pick Pocket
+A realistic NPC pickpocketing system for QBCore with support for both QB-Inventory and QS-Inventory
+- Realistic Pickpocketing System
+- Dynamic Loot System with different wallet types
+- Risk & Reward Mechanic with police alerts
+- Support for both QB-Inventory and QS-Inventory
+- Optimized performance with monitoring
+- Fully configurable settings
+- Player and NPC cooldown system
+- Blacklisted ped system
+- Performance monitoring system
 
-### 🏢 QB Business Framework
-Complete business management system for QBCore
-- 🏪 Multiple business types
-- 📱 NUI Interface
-- 💳 Advanced payment systems
-- 👥 Employee management
+### RD Blips
+A comprehensive blip and marker management system for FiveM servers using the QBCore framework. This resource allows server administrators to dynamically create, manage, and organize map blips and markers with job-based permissions and categories.
+- Dynamic blip and marker creation/management
+- Job-based access control
+- Category-based organization
+- Integration with gs_blips for enhanced display
+- Support for job types and categories
+- Multi-job compatibility with IF-multijob
+- Customizable colors and styles
+- Distance-based marker rendering optimization
+- Admin-only management commands
 
 ## 📦 Latest Releases
 
@@ -44,15 +54,13 @@ Complete business management system for QBCore
 
 ## 🤝 Support & Community
 
-- 💬 Join our [Discord](https://discord.gg/ronin-development) for support
-- 📚 Check our [Documentation](https://docs.ronin-development.com)
+- 💬 Join our [Discord](https://discord.gg/t9UNB5UcRh) for support
+- 📚 Check our [Documentation](ComingSoon)
 - 🌟 Follow us for updates
 - 🔧 Report issues in our Discord
 
 ## 📫 Contact Us
-- Discord: [Ronin Development](https://discord.gg/ronin-development)
-- Email: contact@ronin-development.com
-- FiveM Forums: [Ronin Development](https://forum.cfx.re/u/ronin-development)
+- Discord: [Ronin Development](https://discord.gg/t9UNB5UcRh)
 
 ---
 
