@@ -52,7 +52,7 @@ A comprehensive blip and marker management system for FiveM servers using the QB
 <!-- Latest Releases -->
 [![RD-BLIPS](https://img.shields.io/github/v/release/Ronin-Development-Official/rd-blips?style=for-the-badge&logo=github&label=RD-BLIPS)](https://github.com/Ronin-Development-Official/rd-blips/releases/latest)
 
-[![RD-PICKPOCKET](https://img.shields.io/github/v/release/Ronin-Development-Official/rd-pickpocket?style=for-the-badge&logo=github&label=RD-PICKPOCKET)](https://github.com/Ronin-Development-Official/rd-pickpocket/releases/latest)
+[![RD-PICKPOCKET](https://img.shields.io/github/release/Ronin-Development-Official/rd-pickpocket?style=for-the-badge&logo=github&label=RD-PICKPOCKET)](https://github.com/Ronin-Development-Official/rd-pickpocket/releases/latest)
 
 ## 🤝 Support & Community
 
