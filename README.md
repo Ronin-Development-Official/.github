@@ -49,8 +49,7 @@ A comprehensive blip and marker management system for FiveM servers using the QB
 
 ## 📦 Latest Releases
 
-<!-- This section automatically updates with your latest releases -->
-[![Latest Release](https://img.shields.io/github/v/release/Ronin-Development/latest-resource?style=for-the-badge&logo=github&label=LATEST%20RELEASE)](https://github.com/Ronin-Development/latest-resource/releases/latest)
+[![Latest Release](https://img.shields.io/github/v/release/Ronin-Development-Official/latest-resource?style=for-the-badge&logo=github&label=LATEST%20RELEASE)](https://github.com/Ronin-Development-Official/latest-resource/releases/latest)
 
 ## 🤝 Support & Community
 
