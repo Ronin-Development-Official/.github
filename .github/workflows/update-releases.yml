@@ -13,7 +13,11 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v3
+      - name: Clone Repository
+        run: |
+          git clone https://github.com/Ronin-Development-Official/.github.git .
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
 
       - name: Fetch Release Info
         run: |
@@ -44,8 +48,10 @@ jobs:
 
       - name: Commit and Push Changes
         run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          if git diff --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
           git add README.md
-          git commit -m "Update release badges" || exit 0
-          git push
+          git commit -m "Update release badges"
+          git push https://${{ secrets.GITHUB_TOKEN }}@github.com/Ronin-Development-Official/.github.git HEAD:main
