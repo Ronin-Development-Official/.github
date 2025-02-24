@@ -4,80 +4,48 @@ on:
   release:
     types: [published, unpublished]
   schedule:
-    - cron: '0 */12 * * *'  # Runs every 12 hours
-  workflow_dispatch:  # Allows manual triggering
+    - cron: '0 */12 * * *'
+  workflow_dispatch:
 
 jobs:
   update-releases:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v3
-      
-      - name: Setup Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.x'
 
-      - name: Update Releases Section
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Fetch Release Info
         run: |
-          python - <<EOF
-          import os
-          import json
-          import requests
-
-          # GitHub API setup
-          headers = {
-              'Authorization': f'token {os.environ["GH_TOKEN"]}',
-              'Accept': 'application/vnd.github.v3+json'
-          }
-
-          # Get all repositories for the organization
-          org = "Ronin-Development-Official"
-          repos_url = f"https://api.github.com/orgs/{org}/repos"
-          repos = requests.get(repos_url, headers=headers).json()
-
-          # Generate badges for repositories with releases
-          badges = []
-          for repo in repos:
-              name = repo['name']
-              releases_url = f"https://api.github.com/repos/{org}/{name}/releases"
-              releases = requests.get(releases_url, headers=headers).json()
-              
-              if releases:  # Only add badges for repos with releases
-                  badge = f"[![{name.upper()}](https://img.shields.io/github/v/release/{org}/{name}?style=for-the-badge&logo=github&label={name.upper()})](https://github.com/{org}/{name}/releases/latest)"
-                  badges.append(badge)
-
-          # Sort badges alphabetically
-          badges.sort()
-
-          # Read current README
-          with open('README.md', 'r') as file:
-              content = file.read()
-
-          # Update releases section
-          start_marker = "<!-- BEGIN_RELEASES -->"
-          end_marker = "<!-- END_RELEASES -->"
+          TOKEN="${{ secrets.GITHUB_TOKEN }}"
+          ORG="Ronin-Development-Official"
           
-          if start_marker in content and end_marker in content:
-              start_idx = content.find(start_marker) + len(start_marker)
-              end_idx = content.find(end_marker)
-              
-              new_content = (
-                  content[:start_idx] + 
-                  "\n" + "\n\n".join(badges) + "\n" +
-                  content[end_idx:]
-              )
-              
-              with open('README.md', 'w') as file:
-                  file.write(new_content)
-          EOF
+          # Get all repositories
+          REPOS=$(curl -s -H "Authorization: token $TOKEN" \
+            "https://api.github.com/orgs/$ORG/repos" | \
+            jq -r '.[].name')
+          
+          # Initialize badges array
+          BADGES=""
+          
+          # Loop through repositories and check for releases
+          for REPO in $REPOS; do
+            LATEST=$(curl -s -H "Authorization: token $TOKEN" \
+              "https://api.github.com/repos/$ORG/$REPO/releases/latest" || echo "null")
+            
+            if [ "$LATEST" != "null" ]; then
+              BADGE="[![${REPO^^}](https://img.shields.io/github/v/release/$ORG/$REPO?style=for-the-badge&logo=github&label=${REPO^^})](https://github.com/$ORG/$REPO/releases/latest)"
+              BADGES="${BADGES}${BADGE}\n\n"
+            fi
+          done
+          
+          # Update README.md
+          sed -i -e "/<!-- BEGIN_RELEASES -->/,/<!-- END_RELEASES -->/c\<!-- BEGIN_RELEASES -->\n${BADGES}<!-- END_RELEASES -->" README.md
 
       - name: Commit and Push Changes
         run: |
-          git config --global user.name 'GitHub Action'
-          git config --global user.email 'action@github.com'
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add README.md
           git commit -m "Update release badges" || exit 0
           git push
