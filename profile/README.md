@@ -48,10 +48,9 @@ A comprehensive blip and marker management system for FiveM servers using the QB
 - Admin-only management commands
 
 ## 📦 Latest Releases
-
-<!-- Latest Releases -->
 <!-- BEGIN_RELEASES -->
 <!-- END_RELEASES -->
+
 
 ## 🤝 Support & Community
 
