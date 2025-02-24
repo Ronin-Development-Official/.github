@@ -15,7 +15,7 @@ jobs:
     steps:
       - name: Clone Repository
         run: |
-          git clone https://github.com/Ronin-Development-Official/.github.git .
+          git clone "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/Ronin-Development-Official/.github.git" .
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
 
@@ -60,4 +60,4 @@ jobs:
           fi
           git add README.md
           git commit -m "Update release badges"
-          git push https://${{ secrets.GITHUB_TOKEN }}@github.com/Ronin-Development-Official/.github.git HEAD:main
+          git push "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/Ronin-Development-Official/.github.git" HEAD:main
